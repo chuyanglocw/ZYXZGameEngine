@@ -1,25 +1,39 @@
-#include <SDL2/SDL.h>
+#include <ZYXZ/ZYXZ.hpp>
 
-#undef main
-
-int main(int argc, char* argv[]) {
-    SDL_Init(SDL_INIT_VIDEO);
-    SDL_Window* window = SDL_CreateWindow("Snake Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, 0);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
-    bool running = true;
-    while (running) {
-        SDL_Event event;
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                running = false;
-            }
-        }
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-        SDL_RenderClear(renderer);
-        SDL_RenderPresent(renderer);
+class myGame : public ZYXZ::Game{
+public:
+    myGame() : ZYXZ::Game(){}
+    ~myGame(){}
+    void run() override{
+        init("test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
+        loop();
     }
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+    void loop() override{
+        while(running){
+            handleInput();
+            update();
+            render();
+            clean();
+        }
+    }
+    void quit() override{
+        ZYXZ::Game::quit();
+    }
+protected:
+    void update() override{
+
+    }
+    void render() override{
+
+    }
+    void clean() override{
+
+    }
+};
+
+int main(int argc, char* argv[]){
+    myGame game;
+    game.run();
+    game.quit();
     return 0;
 }
