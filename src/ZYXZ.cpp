@@ -4,6 +4,7 @@ using namespace ZYXZ;
 
 ResourceManager Game::resourceManager;
 AudioManager Game::audioManager;
+RenderManager Game::renderManager;
 Window Game::window = nullptr;
 Renderer Game::renderer = nullptr;
 

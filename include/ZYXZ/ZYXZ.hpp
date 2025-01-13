@@ -89,6 +89,7 @@ protected:
     bool running;
     bool initSuccess;
 public:
+    static RenderManager renderManager;
     static ResourceManager resourceManager;
     static AudioManager audioManager;
     static ZYXZ::Window window;

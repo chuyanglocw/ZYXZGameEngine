@@ -37,5 +37,6 @@
 #include "Resource.hpp"
 #include "ResourceManager.hpp"
 #include "AudioManager.hpp"
+#include "RenderManager.hpp"
 
 #endif // ! __ZYXZ_ALL_HPP__

@@ -45,7 +45,7 @@
 //simplize SDL name
 namespace ZYXZ
 {
-    using Rect = SDL_Rect;
+
     using Point = SDL_Point;
     using Color = SDL_Color;
     using Event = SDL_Event;
@@ -53,6 +53,7 @@ namespace ZYXZ
     using Window = SDL_Window*;
     using Texture = SDL_Texture*;
     using Surface = SDL_Surface*;
+    using Rect = SDL_Rect*;
 
     using String = std::string;
 

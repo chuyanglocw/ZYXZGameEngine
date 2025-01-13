@@ -36,9 +36,9 @@ protected:
 
     }
     void render() override{
-        SDL_RenderClear(renderer);
-        SDL_RenderCopy(renderer, texture, NULL, NULL);
-        SDL_RenderPresent(renderer);
+        renderManager.clear();
+        renderManager.draw(texture, 0, 0, 800, 600);
+        renderManager.present();
     }
     void clean() override{
 
