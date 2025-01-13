@@ -34,8 +34,10 @@
  */
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include <vector>
+#include <unordered_map>
 #include <string>
 #include <iostream>
 
@@ -49,6 +51,7 @@ namespace ZYXZ
     using Renderer = SDL_Renderer*;
     using Window = SDL_Window*;
     using Texture = SDL_Texture*;
+    using Surface = SDL_Surface*;
 
     using String = std::string;
 

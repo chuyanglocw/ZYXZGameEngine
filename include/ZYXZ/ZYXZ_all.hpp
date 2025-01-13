@@ -34,5 +34,7 @@
  */
 
 #include "ZYXZ_SDL.hpp"
+#include "Resource.hpp"
+#include "ResourceManager.hpp"
 
 #endif // ! __ZYXZ_ALL_HPP__

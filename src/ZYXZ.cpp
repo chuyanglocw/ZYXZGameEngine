@@ -2,7 +2,11 @@
 
 using namespace ZYXZ;
 
-Game::Game() : running(true), window(nullptr), renderer(nullptr){}
+ResourceManager Game::resourceManager;
+Window Game::window = nullptr;
+Renderer Game::renderer = nullptr;
+
+Game::Game() : running(true){}
 Game::~Game(){}
 
 void Game::init(String title, int x, int y, int width, int height, bool fullscreen){

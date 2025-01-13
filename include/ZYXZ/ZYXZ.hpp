@@ -89,8 +89,10 @@ protected:
     virtual void clean();
     bool running;
     bool initSuccess;
-    ZYXZ::Window window;
-    ZYXZ::Renderer renderer;
+public:
+    static ResourceManager resourceManager;
+    static ZYXZ::Window window;
+    static ZYXZ::Renderer renderer;
     ZYXZ::Event event;
 };
 
