@@ -1,6 +1,8 @@
 #ifndef __RESOURCE_HPP__
 #define __RESOURCE_HPP__
 
+//update data: 2024-01-13
+
 #include <unordered_map>
 
 namespace ZYXZ
@@ -34,7 +36,7 @@ public:
     int size(){
         return resourceMap.size();
     }
-    std::unordered_map<_Key, _Value> getMap(){
+    std::unordered_map<_Key, _Value> &getMap(){
         return resourceMap;
     }
 private:

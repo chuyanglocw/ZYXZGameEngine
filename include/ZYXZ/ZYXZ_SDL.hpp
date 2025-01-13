@@ -8,7 +8,7 @@
  *
  * @version 0.1
  *
- * @date 2024-01-12
+ * @date 2024-01-13
  *
  * @copyright Copyright (c) 2024
  *
@@ -35,6 +35,7 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_mixer.h>
 
 #include <vector>
 #include <unordered_map>

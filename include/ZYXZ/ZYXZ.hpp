@@ -8,7 +8,7 @@
  *
  * @version 0.1
  *
- * @date 2024-01-12
+ * @date 2024-01-13
  *
  * @copyright Copyright (c) 2024
  *
@@ -69,7 +69,6 @@
  */
 
 #include "ZYXZ_all.hpp"
-#undef main
 
 namespace ZYXZ
 {
@@ -91,6 +90,7 @@ protected:
     bool initSuccess;
 public:
     static ResourceManager resourceManager;
+    static AudioManager audioManager;
     static ZYXZ::Window window;
     static ZYXZ::Renderer renderer;
     ZYXZ::Event event;

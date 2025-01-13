@@ -9,7 +9,7 @@ ResourceManager::~ResourceManager(){
     if (!textureMap.empty()){
         for (auto it = textureMap.getMap().begin(); it != textureMap.getMap().end(); it++){
             SDL_DestroyTexture(it->second);
-            std::cout << "SDL_DestroyTexture: " << it->first << std::endl;
+            std::cout << "DestroyTexture: " << it->first << std::endl;
         }
         textureMap.clear();
     }
@@ -27,6 +27,7 @@ Texture ResourceManager::loadTexture(String filePath){
     Texture texture = SDL_CreateTextureFromSurface(Game::renderer, surface);
     SDL_FreeSurface(surface);
     if (texture){
+        std::cout << "Load Texture: " << filePath << std::endl;
         textureMap.add(filePath, texture);
         return texture;
     }

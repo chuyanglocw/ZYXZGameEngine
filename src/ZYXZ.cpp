@@ -3,6 +3,7 @@
 using namespace ZYXZ;
 
 ResourceManager Game::resourceManager;
+AudioManager Game::audioManager;
 Window Game::window = nullptr;
 Renderer Game::renderer = nullptr;
 

@@ -1,5 +1,7 @@
 #include <ZYXZ/ZYXZ.hpp>
+#undef main
 
+//此为测试用代码 使用Game类作为接口
 class myGame : public ZYXZ::Game{
 public:
     myGame() : ZYXZ::Game(){}
@@ -9,10 +11,15 @@ public:
 
     void run() override{
         init("test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
-        texture = Game::resourceManager.loadTexture("assets/textures/player.png");
+        texture = resourceManager.loadTexture("assets/textures/player.png");
+        audioManager.initialize();
+        audioManager.loadMusic("assets/musics/test.mp3");
+        audioManager.loadSound("assets/sounds/曼波.mp3");
         loop();
     }
     void loop() override{
+        audioManager.playMusic("assets/musics/test.mp3",1);
+        audioManager.playSound("assets/sounds/曼波.mp3",2);
         while(running){
             handleInput();
             update();
@@ -21,6 +28,7 @@ public:
         }
     }
     void quit() override{
+        audioManager.stop();
         ZYXZ::Game::quit();
     }
 protected:
@@ -28,15 +36,16 @@ protected:
 
     }
     void render() override{
-        SDL_RenderClear(Game::renderer);
-        SDL_RenderCopy(Game::renderer, texture, NULL, NULL);
-        SDL_RenderPresent(Game::renderer);
+        SDL_RenderClear(renderer);
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+        SDL_RenderPresent(renderer);
     }
     void clean() override{
 
     }
 };
 
+//启动实现Game接口的类实现运行游戏
 int main(int argc, char* argv[]){
     myGame game;
     game.run();

@@ -5,7 +5,7 @@ CC := g++
 CFLAGS := -Wall -Iinclude -MMD -std=c++20
 
 # 链接器标志
-LDFLAGS := -Lbin -lSDL2 -lSDL2_image
+LDFLAGS := -Lbin -lSDL2 -lSDL2_image -lSDL2_mixer
 
 # 源文件
 SRCS := $(wildcard src/*.cpp)

@@ -1,6 +1,8 @@
 #ifndef __RESOURCE_MANAGER_HPP__
 #define __RESOURCE_MANAGER_HPP__
 
+// update data: 2024-01-13
+
 #include "ZYXZ_SDL.hpp"
 #include "Resource.hpp"
 

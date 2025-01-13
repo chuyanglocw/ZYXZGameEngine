@@ -8,7 +8,7 @@
  *
  * @version 0.1
  *
- * @date 2024-01-12
+ * @date 2024-01-13
  *
  * @copyright Copyright (c) 2024
  *
@@ -36,5 +36,6 @@
 #include "ZYXZ_SDL.hpp"
 #include "Resource.hpp"
 #include "ResourceManager.hpp"
+#include "AudioManager.hpp"
 
 #endif // ! __ZYXZ_ALL_HPP__
